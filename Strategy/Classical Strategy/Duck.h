@@ -1,10 +1,11 @@
-#ifndef _FLY_BEHAVIOR_
-#define _FLY_BEHAVIOR_
+#ifndef _DUCK_H_
+#define _DUCK_H_
 
 #include "FlyBehavior.h"
 
 #include <memory>
 
+//接口类，但是如果定义为纯虚函数则不太方便
 class Duck{
  public:
   Duck(FlyBehavior* flyBehavior) : flyBehavior_(flyBehavior)

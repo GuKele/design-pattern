@@ -1,5 +1,5 @@
-#ifndef _DUCK_
-#define _DUCK_
+#ifndef _FLYBEHAVIOR_H_
+#define _FLYBEHAVIOR_H_
 
 #include <iostream>
 

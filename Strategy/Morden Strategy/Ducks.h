@@ -1,5 +1,5 @@
-#ifndef _DUCKS_
-#define _DUCKS_
+#ifndef _DUCKS_H_
+#define _DUCKS_H_
 
 #include <functional>
 #include <iostream>  
