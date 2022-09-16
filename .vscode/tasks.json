@@ -8,8 +8,12 @@
         "-fdiagnostics-color=always",
         "-g",
         "${fileDirname}/*.cpp",
+        "-I",
+        "/usr/local/include",
+        //"-L",
+        //"/usr/local/lib",
         "-o",
-        "${fileDirname}/${fileBasenameNoExtension}"
+        "test.out",
         //"-ggdb", // 尽量生成gdb可以使用的调试信息
         //"-o", // 指定输出路径和文件名为...
         //"${wordspaceFolder}/Builder/test", // 

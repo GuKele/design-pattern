@@ -22,7 +22,7 @@ class Person::PersonImpl
 
 
 Person::Person(const string& name) : impl_(new PersonImpl(name)) {}
-Person::~Person() { delete impl_; }
+Person::~Person() {}
 
 //将更多的细节隐藏在PersonImpl中，并且减少编译时间。修改PersonImpl数据成员不会影响二进制兼容性
 void Person::greet(){ 

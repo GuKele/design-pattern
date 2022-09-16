@@ -4,7 +4,7 @@
 #include <vector>
 #include <iostream>
 
-template <typename Self>
+template <typename Derived>
 class BaseNeuron
 {
   //通过begin/end将单个对象伪装成集合后，使用模板来实现单个对象和集合相同接口
@@ -12,8 +12,9 @@ class BaseNeuron
  public:
   template <typename Other>
   void connect_to(Other& other){
-    //static_cast<Self>，才会不报错说没有begin、end以及out_ 、 in_
-    for(auto& from : *static_cast<Self*>(this)){
+    //CRTP 奇异递归模板模式
+    //static_cast<Derived>，才会不报错说没有begin、end以及out_ 、in_
+    for(auto& from : *static_cast<Derived*>(this)){
       for(auto& to : other){
         from.out_.push_back(&to);
         to.in_.push_back(&from);
